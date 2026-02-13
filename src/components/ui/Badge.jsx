@@ -1,8 +1,4 @@
-export default function Badge({
-  children,
-  color = "blue",
-  className = "",
-}) {
+export default function Badge({ children, color = "blue", className = "" }) {
   const colors = {
     blue: "bg-brand-blue/20 text-brand-blue",
     orange: "bg-brand-orange/20 text-brand-orange",

@@ -5,11 +5,7 @@ export default function Button({
   ...props
 }) {
   return (
-    <button
-      type={type}
-      className={className}
-      {...props}
-    >
+    <button type={type} className={`cursor-pointer ${className}`} {...props}>
       {children}
     </button>
   );
