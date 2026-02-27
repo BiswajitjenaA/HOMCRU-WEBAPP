@@ -43,7 +43,7 @@ export default function App() {
       />
 
       <Route
-        path="/Terms-and-Conditions"
+        path="/terms-and-conditions"
         element={
           <Layout>
             <Terms />

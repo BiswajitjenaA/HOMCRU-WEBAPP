@@ -290,7 +290,12 @@ export default function Terms() {
             </p>
             <p className="mt-3">
               110.3 Reporting Misconduct: If a Service Provider behaves
-              inappropriately, you must report the incident to info@homcru.com
+              inappropriately, you must report the incident to <a
+                  href="mailto:info@homcru.com"
+                  className="text-decoration-none text-brand-orange"
+                >
+                  info@homcru.com
+                </a>{" "}
               within 48 hours. Homcru may take appropriate action, including
               suspension or termination of accounts.
             </p>
@@ -409,7 +414,12 @@ export default function Terms() {
             </p>
             <p className="mt-3">
               17.2 By You: You may terminate your Account at any time by
-              contacting info@homcru.com. Termination will be effective within a
+              contacting <a
+                  href="mailto:info@homcru.com"
+                  className="text-decoration-none text-brand-orange"
+                >
+                  info@homcru.com
+                </a>. Termination will be effective within a
               reasonable time.
             </p>
             <p className="mt-3">
@@ -424,7 +434,12 @@ export default function Terms() {
             <p>18.1 These Terms shall be governed by the laws of India.</p>
             <p className="mt-3">
               18.2 Informal Resolution: Before initiating any formal
-              proceedings, you agree to contact us at info@homcru.com to attempt
+              proceedings, you agree to contact us at <a
+                  href="mailto:info@homcru.com"
+                  className="text-decoration-none text-brand-orange"
+                >
+                  info@homcru.com
+                </a> to attempt
               to resolve the dispute informally for 30 days.
             </p>
             <p className="mt-3">
@@ -495,7 +510,7 @@ export default function Terms() {
 function Section({ title, children }) {
   return (
     <div className="bg-brand-surface border border-white/5 rounded-3xl p-8 hover:border-brand-blue/40 transition-all duration-300">
-      <h2 className="text-brand-blue font-bold text-xl mb-6">{title}</h2>
+      <h2 className="text-brand-orange font-bold text-xl mb-6">{title}</h2>
       {children}
     </div>
   );

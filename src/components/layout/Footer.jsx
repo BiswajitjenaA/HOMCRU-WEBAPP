@@ -91,7 +91,7 @@ export default function Footer() {
             <h4 className="font-semibold text-white mb-4">Company</h4>
             <ul className="space-y-3 text-sm text-gray-400">
               <FooterLink to="/about-us">About us</FooterLink>
-              <FooterLink to="/Terms-and-Conditions">Terms & conditions</FooterLink>
+              <FooterLink to="/terms-and-conditions">Terms & conditions</FooterLink>
               <FooterLink to="/privacy-policy">Privacy policy</FooterLink>
               <FooterLink to="/careers">Careers</FooterLink>
             </ul>
@@ -195,19 +195,9 @@ export default function Footer() {
         <div className="py-6 text-sm text-gray-500">
           {/* <p className="mb-2">* As on December 31, 2025</p> */}
           <p>
-            © Copyright 2026 Homcru Technologies Pvt. Ltd. All rights reserved.
+            © Copyright 2026 Homcru Services Pvt. Ltd. All rights reserved.
           </p>
-          <p>
-            Designed By{" "}
-            <a
-              href="https://i-am-satyaprakash.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-400"
-            >
-              Satya
-            </a>
-          </p>
+          
         </div>
       </Container>
     </footer>

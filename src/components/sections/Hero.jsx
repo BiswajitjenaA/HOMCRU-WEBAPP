@@ -11,7 +11,7 @@ export default function Hero() {
     }
   };
   return (
-    <section className="hero-bg relative bg-brand-black pt-20 pb-28 lg:pt-52 lg:pb-40">
+    <section className="hero-bg relative bg-brand-black pt-15 pb-28 lg:pt-20 lg:pb-40">
       <Container className="text-center">
         {/* Badge */}
         <div className="inline-flex items-center gap-3 border border-white/20 bg-black/60 px-5 py-2 rounded-full backdrop-blur-md mb-8">

@@ -13,9 +13,8 @@ import {
 
 export default function Careers() {
   return (
-    <section className="py-24 bg-brand-black border-t border-white/5 relative overflow-hidden">
+    <section className="py-15 bg-brand-black border-t border-white/5 relative overflow-hidden">
       <Container>
-
         {/* Glow Background */}
         <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-125 h-125 bg-brand-blue/10 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -31,8 +30,8 @@ export default function Careers() {
           </h1>
 
           <p className="text-gray-400 text-lg leading-relaxed">
-            Join a fast-growing technology platform transforming how India connects
-            households, professionals, and daily wage workers.
+            Join a fast-growing technology platform transforming how India
+            connects households, professionals, and daily wage workers.
           </p>
         </div>
 
@@ -114,11 +113,13 @@ export default function Careers() {
         {/* HIRING PROCESS */}
         <SectionTitle title="Hiring Process" />
 
-        <div className="grid md:grid-cols-4 gap-6 mb-24">
-          <StepCard step="1" title="Apply Online" />
-          <StepCard step="2" title="Initial Screening" />
-          <StepCard step="3" title="Interview Round" />
-          <StepCard step="4" title="Final Selection" />
+        <div className="relative mb-24">
+          <div className="grid md:grid-cols-4 gap-6 relative z-10">
+            <StepCard step="1" title="Apply Online" showArrow={true} />
+            <StepCard step="2" title="Initial Screening" showArrow={true} />
+            <StepCard step="3" title="Interview Round" showArrow={true} />
+            <StepCard step="4" title="Final Selection" showArrow={false} />
+          </div>
         </div>
 
         {/* CTA */}
@@ -129,17 +130,19 @@ export default function Careers() {
 
           <p className="text-gray-300 mb-6">
             Send your resume to
-            <span className="text-brand-blue font-semibold">
-              {" "}info@homcru.com
-            </span>
+            <a href="mailto:info@homcru.com">
+              <span className="text-brand-blue font-semibold">
+                {" "}
+                info@homcru.com
+              </span>
+            </a>
           </p>
 
-          <button className="bg-brand-blue text-white px-8 py-3 rounded-full font-bold hover:bg-blue-600 transition-all duration-200 inline-flex items-center gap-2">
+          {/* <button className="bg-brand-blue text-white px-8 py-3 rounded-full font-bold hover:bg-blue-600 transition-all duration-200 inline-flex items-center gap-2">
             Apply Now
             <FontAwesomeIcon icon={faArrowRight} />
-          </button>
+          </button> */}
         </div>
-
       </Container>
     </section>
   );
@@ -158,7 +161,9 @@ function SectionTitle({ title }) {
 function ColorCard({ icon, title, content, gradient }) {
   return (
     <div className="bg-brand-surface border border-white/5 rounded-3xl p-8 hover:border-white/20 transition-all duration-300">
-      <div className={`w-14 h-14 rounded-2xl bg-linear-to-br ${gradient} text-white flex items-center justify-center mb-6 shadow-lg`}>
+      <div
+        className={`w-14 h-14 rounded-2xl bg-linear-to-br ${gradient} text-white flex items-center justify-center mb-6 shadow-lg`}
+      >
         <FontAwesomeIcon icon={icon} />
       </div>
       <h3 className="text-white font-bold text-lg mb-3">{title}</h3>
@@ -170,7 +175,9 @@ function ColorCard({ icon, title, content, gradient }) {
 function ColorValueCard({ icon, title, content, gradient }) {
   return (
     <div className="bg-brand-surface border border-white/5 rounded-3xl p-8 text-center hover:border-white/20 transition-all duration-300">
-      <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl bg-linear-to-br ${gradient} text-white flex items-center justify-center shadow-lg`}>
+      <div
+        className={`w-16 h-16 mx-auto mb-6 rounded-2xl bg-linear-to-br ${gradient} text-white flex items-center justify-center shadow-lg`}
+      >
         <FontAwesomeIcon icon={icon} />
       </div>
       <h4 className="text-white font-bold mb-3">{title}</h4>
@@ -189,20 +196,28 @@ function JobCard({ title, location, type }) {
         </p>
       </div>
 
-      <button className="mt-4 md:mt-0 bg-white/5 border border-white/10 text-white px-6 py-2 rounded-full hover:bg-brand-blue hover:border-brand-blue transition-all duration-200">
+      <button className="mt-4 md:mt-0 bg-white/5 border border-white/10 text-white px-6 py-2 rounded-full hover:bg-brand-blue hover:border-brand-blue transition-all duration-200 cursor-pointer">
         View Details
       </button>
     </div>
   );
 }
 
-function StepCard({ step, title }) {
+function StepCard({ step, title, showArrow }) {
   return (
-    <div className="bg-brand-surface border border-white/5 rounded-3xl p-6 text-center hover:border-brand-blue/40 transition-all duration-300">
-      <div className="w-10 h-10 mx-auto mb-4 rounded-full bg-brand-blue text-white flex items-center justify-center font-bold">
+    <div className="relative bg-brand-surface border border-white/5 rounded-3xl p-6 text-center hover:border-brand-blue/40 transition-all duration-300">
+      <div className="w-10 h-10 mx-auto mb-4 rounded-full bg-brand-blue text-white flex items-center justify-center font-bold relative z-10">
         {step}
       </div>
+
       <p className="text-white font-semibold">{title}</p>
+
+      {/* Arrow (Desktop only) */}
+      {showArrow ? (
+        <div className="hidden md:block absolute -right-5.75 top-1/2 -translate-y-1/2 text-brand-blue text-lg">
+          <FontAwesomeIcon icon={faArrowRight} />
+        </div>
+      ) : null}
     </div>
   );
 }

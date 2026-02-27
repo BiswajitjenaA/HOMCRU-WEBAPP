@@ -19,7 +19,6 @@ export default function About() {
       className="py-5 bg-brand-black border-t border-white/5 relative overflow-hidden"
     >
       <Container>
-
         {/* Decorative Glow */}
         <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-125 h-125 bg-brand-blue/10 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -30,7 +29,7 @@ export default function About() {
           </span>
 
           <h2 className="font-display font-black text-4xl md:text-5xl text-white mt-4 mb-6">
-            One App for Home Services, Workers & Parts —
+            One App for Home Services, Workers & Parts -
             <span className="text-brand-blue"> Delivered Fast</span>
           </h2>
 
@@ -44,42 +43,39 @@ export default function About() {
 
         {/* Core Platform Principles */}
         <div className="grid md:grid-cols-2 gap-10 mb-24 relative z-10">
-
           <FeatureCard
             icon={faUserCheck}
-            iconBg="bg-brand-blue/20 text-brand-blue"
+            iconBg="bg-brand-blue text-brand-white"
             title="Verified Professionals & Workers"
             content="All professionals and daily wage workers undergo identity verification and structured onboarding. Skill-based workers are additionally assessed to ensure service quality and safety."
           />
 
           <FeatureCard
             icon={faShieldHalved}
-            iconBg="bg-green-500/20 text-green-400"
+            iconBg="bg-green-500 text-white"
             title="Structured & Transparent Services"
             content="Customers receive clearly defined service scopes, wage structures for daily labour, and transparent pricing models to reduce uncertainty."
           />
 
           <FeatureCard
             icon={faNetworkWired}
-            iconBg="bg-purple-500/20 text-purple-400"
+            iconBg="bg-purple-500 text-white"
             title="Technology-Driven Coordination"
             content="Homcru manages worker allocation, job tracking, and service completion through technology, enabling smooth coordination."
           />
 
           <FeatureCard
             icon={faBoxesPacking}
-            iconBg="bg-brand-orange/20 text-brand-orange"
+            iconBg="bg-brand-orange text-brand-white"
             title="Service Enablement Through Materials"
             content="We are integrating parts and materials delivery to improve turnaround times and reduce dependency on external vendors."
           />
-
         </div>
 
         {/* What We Do */}
         <SectionTitle title="What We Do" />
 
         <div className="grid md:grid-cols-2 gap-10 mb-24">
-
           <BulletList
             title="Professional Services"
             icon={faBriefcase}
@@ -105,33 +101,29 @@ export default function About() {
               "Short-term Assistance",
             ]}
           />
-
         </div>
 
         {/* For Customers & Workers */}
         <div className="grid lg:grid-cols-2 gap-16 mb-24">
-
           <InfoBlock
             icon={faHouse}
-            iconBg="bg-brand-blue/20 text-brand-blue"
+            iconBg="bg-brand-blue text-brand-white"
             title="For Customers"
             content="Homcru helps customers access professional services, daily wage workers, and essential service support through a single platform. Customers benefit from easy booking, verified workers, recurring service support, and future access to materials."
           />
 
           <InfoBlock
             icon={faToolbox}
-            iconBg="bg-brand-orange/20 text-brand-orange"
+            iconBg="bg-brand-orange text-brand-white"
             title="For Professionals & Workers"
             content="Homcru supports skilled professionals and daily wage workers with regular work opportunities, trusted customers, fair payments, reduced intermediaries, and structured job flow."
           />
-
         </div>
 
         {/* How It Works Preview */}
         <SectionTitle title="How It Works" />
 
         <div className="grid md:grid-cols-4 gap-6">
-
           <StepCard
             step="1"
             title="Choose Service"
@@ -155,9 +147,7 @@ export default function About() {
             title="Easy Payment"
             desc="Transparent payment processing and support after completion."
           />
-
         </div>
-
       </Container>
     </section>
   );
@@ -168,7 +158,9 @@ export default function About() {
 function FeatureCard({ icon, title, content, iconBg }) {
   return (
     <div className="bg-brand-surface border border-white/5 rounded-3xl p-8 hover:border-brand-blue/40 transition-all duration-300">
-      <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 ${iconBg}`}>
+      <div
+        className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 ${iconBg}`}
+      >
         <FontAwesomeIcon icon={icon} />
       </div>
       <h3 className="text-white font-bold text-xl mb-3">{title}</h3>
@@ -198,7 +190,10 @@ function BulletList({ title, items, icon, iconColor }) {
         {items.map((item, index) => (
           <li key={index} className="flex items-center gap-3">
             <div className="w-6 h-6 rounded-md bg-brand-blue/20 flex items-center justify-center">
-              <FontAwesomeIcon icon={faCheckCircle} className="text-brand-blue text-xs" />
+              <FontAwesomeIcon
+                icon={faCheckCircle}
+                className="text-brand-blue text-xs"
+              />
             </div>
             {item}
           </li>
@@ -212,7 +207,9 @@ function InfoBlock({ title, content, icon, iconBg }) {
   return (
     <div>
       <div className="flex items-center gap-4 mb-4">
-        <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${iconBg}`}>
+        <div
+          className={`w-12 h-12 rounded-xl flex items-center justify-center ${iconBg}`}
+        >
           <FontAwesomeIcon icon={icon} />
         </div>
         <h4 className="text-white font-bold text-2xl">{title}</h4>

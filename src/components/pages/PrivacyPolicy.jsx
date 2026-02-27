@@ -8,12 +8,12 @@ export default function PrivacyPolicy() {
         <div className="mb-16 text-center">
           <h1 className="font-display font-black text-4xl md:text-5xl mb-4">
             HOMCRU –{" "}
-            <span className="text-brand-blue">PRIVACY & DATA PROMISE</span>
+            <span className="text-brand-blue">Privacy & Data Promise</span>
           </h1>
           <p className="text-brand-orange">Last updated: 2026</p>
         </div>
 
-        <div className="space-y-16 text-gray-300 leading-relaxed text-sm md:text-base">
+        <div className="space-y-16 text-gray-300  text-sm md:text-base">
           {/* Intro */}
           <Block>
             <p>
@@ -269,9 +269,7 @@ export default function PrivacyPolicy() {
                 description="If you said yes and changed your mind, just tell us."
               />
             </div>
-            <p className="mt-4 text-brand-blue">
-              Send requests to: info@homcru.com
-            </p>
+            
           </Block>
 
           {/* Cookies */}
@@ -365,7 +363,7 @@ export default function PrivacyPolicy() {
           <Block>
             <p>
               Email us anytime at{" "}
-              <span className="text-brand-blue">info@homcru.com</span>
+              <a href="mailto:info@homcru.com"><span className="text-brand-blue">info@homcru.com</span></a>
             </p>
             <p className="mt-4">
               This Privacy Promise is an integral part of Homcru’s Terms &
@@ -388,7 +386,7 @@ export default function PrivacyPolicy() {
 
 function SectionTitle({ title }) {
   return (
-    <h2 className="font-display font-bold text-2xl md:text-3xl text-white border-l-4 border-brand-blue pl-4">
+    <h2 className="font-display font-bold  md:text-3xl text-white border-l-4 border-brand-blue pl-4">
       {title}
     </h2>
   );
@@ -417,7 +415,7 @@ function DataRow({ type, description }) {
       </div>
 
       <div className="md:col-span-2">
-        <p className="text-gray-400 text-sm leading-relaxed">{description}</p>
+        <p className="text-gray-400 text-sm ">{description}</p>
       </div>
     </div>
   );

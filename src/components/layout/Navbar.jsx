@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Container from "../ui/Container";
 import Button from "../ui/Button";
 import ComingSoonModal from "../ui/ComingSoonModal";
+import logo from "../../assets/logo/Logo.png"
 
 export default function Navbar() {
   const [showComingSoon, setShowComingSoon] = useState(false);
@@ -11,7 +12,14 @@ export default function Navbar() {
       <Container>
         <div className="flex justify-between h-20 items-center">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-0.7">
+        
+            <img
+              src={logo}
+              alt="HOMCRU Logo"
+              className="h-10 w-auto object-contain"
+            />
+          
             <span className="display font-black text-2xl tracking-tighter text-white">
               HOMCRU
             </span>

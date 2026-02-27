@@ -44,7 +44,7 @@ export default function BookingModal({ open, service, onClose }) {
         {/* CLOSE */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-white"
+          className="absolute top-4 right-4 text-gray-400 hover:text-white cursor-pointer"
         >
           ✕
         </button>

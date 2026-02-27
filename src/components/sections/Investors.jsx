@@ -1,10 +1,6 @@
 import Container from "../ui/Container";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowRight,
-  faUserTie,
-  faCode,
-} from "@fortawesome/free-solid-svg-icons";
+import biswajit from "../../assets/images/Biswjit.jpeg";
+import akash from "../../assets/images/Akash.jpeg";
 
 export default function Investors() {
   return (
@@ -52,21 +48,6 @@ export default function Investors() {
                 <p className="text-3xl font-bold">100% YoY</p>
               </div>
             </div>
-
-            {/* CTA */}
-            <button
-              className="
-                inline-flex items-center gap-2
-                text-white font-bold
-                border-b border-white
-                hover:text-blue-500 hover:border-blue-500
-                transition-colors
-                pb-1
-              "
-            >
-              Request Pitch Deck
-              <FontAwesomeIcon icon={faArrowRight} />
-            </button>
           </div>
 
           {/* RIGHT CARDS */}
@@ -83,15 +64,16 @@ export default function Investors() {
                 hover:border-white/30
               "
             >
-              <div className="w-16 h-16 bg-white/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <FontAwesomeIcon icon={faUserTie} className="text-2xl" />
+              <div className="w-20 h-20 mx-auto mb-4">
+                <img
+                  src={akash}
+                  alt="Akash K. Tripathy"
+                  className="w-full h-full rounded-full object-cover border-2 "
+                />
               </div>
               <h4 className="font-bold">Akash K. Tripathy</h4>
               <p className="text-xs text-orange-500 font-bold uppercase mt-1">
                 Founder, Ops
-              </p>
-              <p className="text-xs text-gray-500 mt-2">
-                12+ Years Supply Chain
               </p>
             </div>
 
@@ -107,14 +89,17 @@ export default function Investors() {
                 hover:border-white/30
               "
             >
-              <div className="w-16 h-16 bg-white/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <FontAwesomeIcon icon={faCode} className="text-2xl" />
+              <div className="w-20 h-20 mx-auto mb-4">
+                <img
+                  src={biswajit}
+                  alt="Biswajit Jena"
+                  className="w-full h-full rounded-full object-cover border-2 border-blue-500"
+                />
               </div>
               <h4 className="font-bold">Biswajit Jena</h4>
               <p className="text-xs text-blue-500 font-bold uppercase mt-1">
                 Co-Founder, Tech
               </p>
-              <p className="text-xs text-gray-500 mt-2">Tech Architect</p>
             </div>
           </div>
         </div>
