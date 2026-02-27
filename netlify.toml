@@ -1,0 +1,26 @@
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Content-Type = "application/javascript"
+
+[[headers]]
+  for = "/*.jsx"
+  [headers.values]
+    Content-Type = "application/javascript"
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+
+---
+
+### Fix 2 — Add missing files to your `public/` folder
+
+Vite copies everything in `public/` directly to `dist/`. Make sure these files exist in `public/`:
+
+public/
+  favicon.ico
+  favicon-32x32.png
+  favicon-16x16.png
+  site.webmanifest
